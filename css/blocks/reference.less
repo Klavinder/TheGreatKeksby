@@ -1,0 +1,72 @@
+// main: ../style.less
+
+.cat-reference {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    background-color: #f2f2f2;
+
+    dl {
+        width: 820px;
+        margin: 0;
+        padding: 0;
+    }
+    dt {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    dd {
+        display: flex;
+        margin: 0;
+    }
+    dd + dt {
+        margin-top: 70px;
+    }
+    dd img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+    }
+    dd p {
+        margin: 0;
+        margin-left: 30px;
+    }
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+    font-family: "Georgia", serif;
+    color: @brown;
+}
+
+.reference-title {
+    display: inline;
+    font-size: 24px;
+}
+
+.reference-source {
+  color: #666666;
+  font-style: italic;
+
+  a {
+    position: relative;
+    color: @brown;
+
+    &:hover {
+        color: #8d745a;
+    }
+    &:active {
+        color: rgba(141, 116, 90, 0.3);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -10px;
+        width: 8px;
+        height: 8px;
+        background: url("../img/sprite.png") no-repeat -5px -210px;
+    }
+  }
+}

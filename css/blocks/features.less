@@ -1,0 +1,59 @@
+// main: ../style.less
+
+.features {
+    padding-top: 50px;
+    padding-bottom: 55px;
+
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.feature-item {
+    position: relative;
+    width: 279px;
+    padding: 90px 30px 0 30px;
+    text-align: center;
+    border-left: 1px solid #d9d9d9;
+
+    p {
+        margin: 0;
+    }
+    &:first-child {
+        border-left-color: transparent;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 137px;
+        width: 65px;
+        height: 65px;
+        background-image: url("../img/sprite.png");
+        background-repeat: no-repeat;
+    }
+}
+
+.feature-choise::before {
+    background-position: -5px -5px;
+}
+
+.feature-quality::before {
+    background-position: -5px -76px;
+}
+
+.feature-safety::before {
+    background-position: 1px -143px;
+}
+
+.feature-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Georgia", serif;
+    color: @brown;
+}

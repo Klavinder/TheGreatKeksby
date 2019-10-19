@@ -9,6 +9,7 @@
   text-transform: uppercase;
   text-decoration: none;
   padding: 10px;
+  border: 2px solid @brown;
   border-radius: 2px;
 
   &-nav {
@@ -26,7 +27,6 @@
   }
   &-main {
       color: @brown;
-      border: 2px solid @brown;
 
       &:hover  {
           color: #8d745a;
@@ -37,6 +37,35 @@
           border-color: #8d745a;
       }
   }
+}
+
+.catalog-item .btn {
+    width: 101px;
+    color: @white;
+    background-color: @brown;
+
+    &:hover {
+        background-color: #8d745a;
+        border-color: #8d745a;
+    }
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+        border-color: #8d745a;
+    }
+}
+
+.feedback-form .btn {
+    margin-top: 40px;
+    color: @white;
+    background-color: @brown;
+
+    &:hover {
+        background-color: #8d745a;
+        border-color: #8d745a;
+    }
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+    }
 }
 
 .social-btn {

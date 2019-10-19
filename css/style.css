@@ -26,6 +26,13 @@ h6 {
   align-items: center;
   margin-bottom: 60px;
 }
+.section-title {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
+  font-family: "Georgia", serif;
+  color: #a38b70;
+}
 .btn {
   display: inline-block;
   width: 146px;
@@ -35,6 +42,7 @@ h6 {
   text-transform: uppercase;
   text-decoration: none;
   padding: 10px;
+  border: 2px solid #a38b70;
   border-radius: 2px;
 }
 .btn-nav {
@@ -51,7 +59,6 @@ h6 {
 }
 .btn-main {
   color: #a38b70;
-  border: 2px solid #a38b70;
 }
 .btn-main:hover {
   color: #8d745a;
@@ -60,6 +67,31 @@ h6 {
 .btn-main:active {
   color: rgba(141, 116, 90, 0.3);
   border-color: #8d745a;
+}
+.catalog-item .btn {
+  width: 101px;
+  color: #ffffff;
+  background-color: #a38b70;
+}
+.catalog-item .btn:hover {
+  background-color: #8d745a;
+  border-color: #8d745a;
+}
+.catalog-item .btn:active {
+  color: rgba(255, 255, 255, 0.3);
+  border-color: #8d745a;
+}
+.feedback-form .btn {
+  margin-top: 40px;
+  color: #ffffff;
+  background-color: #a38b70;
+}
+.feedback-form .btn:hover {
+  background-color: #8d745a;
+  border-color: #8d745a;
+}
+.feedback-form .btn:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 .social-btn {
   display: inline-block;
@@ -221,16 +253,11 @@ h6 {
   margin: 0;
   margin-left: 30px;
 }
-.section-title {
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 55px;
-  font-family: "Georgia", serif;
-  color: #a38b70;
-}
 .reference-title {
   display: inline;
   font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
 .reference-source {
   color: #666666;
@@ -300,18 +327,6 @@ h6 {
   margin-bottom: 20px;
   font-size: 16px;
   color: #000000;
-}
-.catalog-item .btn {
-  width: 101px;
-  color: #ffffff;
-  background-color: #a38b70;
-  border: 2px solid #a38b70;
-}
-.catalog-item .btn:hover {
-  background-color: #8d745a;
-}
-.catalog-item .btn:active {
-  color: rgba(255, 255, 255, 0.3);
 }
 .price {
   display: flex;
@@ -397,6 +412,36 @@ h6 {
   font-size: 12px;
   text-transform: uppercase;
 }
+.feedback-form-group .select {
+  position: relative;
+}
+.feedback-form-group .select select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.feedback-form-group .select select:hover ~ .arrow {
+  border-top-color: #bebebe;
+  border-right-color: #bebebe;
+}
+.feedback-form-group .select select:focus ~ .arrow {
+  border-top-color: #8d745a;
+  border-right-color: #8d745a;
+}
+.feedback-form-group .select .arrow {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 19px;
+  width: 13px;
+  height: 13px;
+  pointer-events: none;
+  border-top: 2px solid #d5d5d5;
+  border-right: 2px solid #d5d5d5;
+  transform: rotate(135deg);
+}
 .feedback-form input[type="text"],
 .feedback-form select,
 .feedback-form textarea {
@@ -406,6 +451,7 @@ h6 {
   padding: 9px 15px;
   font: inherit;
   color: inherit;
+  outline: none;
   border: 2px solid #d5d5d5;
 }
 .feedback-form input[type="text"]:hover,
@@ -422,17 +468,6 @@ h6 {
   display: block;
   min-height: 120px;
 }
-.feedback-form .btn {
-  margin-top: 40px;
-  color: #ffffff;
-  background-color: #a38b70;
-}
-.feedback-form .btn:hover {
-  background-color: #8d745a;
-}
-.feedback-form .btn:active {
-  color: rgba(255, 255, 255, 0.3);
-}
 .checkbox-area {
   margin-bottom: 25px;
   padding-top: 25px;
@@ -440,9 +475,51 @@ h6 {
   padding-left: 17px;
   border-bottom: 1px solid #d5d5d5;
 }
-.checkbox-area input[type="checkbox"] {
-  margin: 0;
-  margin-right: 5px;
+.checkbox-area label {
+  display: block;
+  position: relative;
+  padding-left: 38px;
+  cursor: pointer;
+}
+.checkbox-area label input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.checkbox-area label input:checked ~ .frame::after {
+  display: block;
+}
+.checkbox-area label:hover .frame {
+  border-color: #b3b3b3;
+}
+.checkbox-area label:active .frame {
+  border-color: #a38b70;
+}
+.checkbox-area label:active .frame::after {
+  opacity: 0.7;
+}
+.checkbox-area .frame {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 2px solid #d5d5d5;
+  border-radius: 1px;
+}
+.checkbox-area .frame::after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 2px;
+  width: 7px;
+  height: 14px;
+  border: solid #a38b70;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 .footer {
   padding-top: 45px;

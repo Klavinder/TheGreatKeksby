@@ -1,42 +1,46 @@
 // main: ../style.less
 
 .btn {
-  display: inline-block;
-  width: 146px;
-  font-size: 18px;
-  vertical-align: top;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid @brown;
-  border-radius: 2px;
+    display: inline-block;
+    width: 146px;
+    font-size: 18px;
+    vertical-align: top;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid @brown;
+    border-radius: 2px;
 
-  &-nav {
-      color: @white;
-      border: 2px solid @white;
+    &-nav {
+        color: @white;
+        border: 2px solid @white;
 
-      &:hover {
-          color: @black;
-          background-color: @white;
-      }
-      &:active {
-          color: rgba(64, 64, 64, 0.3);
-          background-color: @white;
-      }
-  }
-  &-main {
-      color: @brown;
+        &:hover,
+        &:focus {
+            outline: none;
+            color: @black;
+            background-color: @white;
+            }
+        &:active {
+            color: rgba(64, 64, 64, 0.3);
+            background-color: @white;
+            }
+    }
+    &-main {
+        color: @brown;
 
-      &:hover  {
-          color: #8d745a;
-          border-color: #8d745a;
-      }
-      &:active {
-          color: rgba(141, 116, 90, 0.3);
-          border-color: #8d745a;
-      }
-  }
+        &:hover,
+        &:focus  {
+            outline: none;
+            color: #8d745a;
+            border-color: #8d745a;
+        }
+        &:active {
+            color: rgba(141, 116, 90, 0.3);
+            border-color: #8d745a;
+        }
+    }
 }
 
 .catalog-item .btn {
@@ -44,7 +48,9 @@
     color: @white;
     background-color: @brown;
 
-    &:hover {
+    &:hover,
+    &:focus {
+        outline: none;
         background-color: #8d745a;
         border-color: #8d745a;
     }
@@ -58,8 +64,11 @@
     margin-top: 40px;
     color: @white;
     background-color: @brown;
+    cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
+        outline: none;
         background-color: #8d745a;
         border-color: #8d745a;
     }
@@ -79,7 +88,9 @@
     background-repeat: no-repeat;
     border: 1px solid rgba(255, 255, 255, 0.1);
 
-    &:hover {
+    &:hover,
+    &:focus {
+        outline: none;
         border-color: rgba(255, 255, 255, 0.3);
     }
     &:active {

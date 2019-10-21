@@ -115,6 +115,9 @@
             &:checked ~ .frame::after {
                 display: block;
             }
+            &:focus ~ .frame {
+                border-color: @brown;
+            }
         }
         &:hover .frame {
             border-color: #b3b3b3;
